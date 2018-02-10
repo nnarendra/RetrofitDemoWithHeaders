@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        initAndSetClickLisnarsViews();
+        initAndSetClickListenersViews();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mpProgressDialog = new ProgressDialog(this);
@@ -36,12 +36,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
-    private void initAndSetClickLisnarsViews() {
+    private void initAndSetClickListenersViews() {
         mLogin = findViewById(R.id.btn_login);
         mLogin.setOnClickListener(this);
         mUserName = findViewById(R.id.et_user_name);
         mPassword = findViewById(R.id.et_password);
-
         findViewById(R.id.tv_forgot_pwd).setOnClickListener(this);
         findViewById(R.id.iv_facebook_login).setOnClickListener(this);
         findViewById(R.id.iv_google_login).setOnClickListener(this);
@@ -52,19 +51,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onBackPressed() {
-
     }
 
     @Override
     public void onClick(View view) {
 
         switch (view.getId()) {
-
             case R.id.btn_login:
-
                 login();
                 break;
-
             case R.id.btn_sign_up:
             case R.id.iv_twitter_login:
             case R.id.iv_linked_login:
@@ -75,17 +70,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         .setAction("Action", null).show();
 
                 break;
-
-
             default:
                 break;
-
         }
-
     }
 
     private void login() {
-
         if(!mUserName.getText().toString().equals("")
                 &&(!mPassword.getText().toString().equals("")&&mPassword.getText().toString().length()>=6)){
             doLogin(mUserName.getText().toString(),mPassword.getText().toString());
@@ -93,7 +83,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this,"Please check user name or password",Toast.LENGTH_LONG).show();
 
         }
-
     }
 
     private void doLogin(String userName, String password) {

@@ -13,6 +13,7 @@ public class RetrofitDemoApplication extends Application {
     public static ApiInterface sApiService;
     private static RetrofitDemoApplication sSingleton;
 
+
     ////
     // get instance of application
     ///

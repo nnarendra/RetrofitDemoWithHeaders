@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.naren.connectingwithserverviaretrofit.R
+import com.naren.connectingwithserverviaretrofit.activityies.managers.SharedPreferenceManager
 import kotlinx.android.synthetic.main.activity_splash.*
 
 
@@ -22,8 +23,12 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed(Runnable
         {
 
-            val i = Intent(this@SplashActivity, LoginActivity::class.java)
-            startActivity(i)
+           if(SharedPreferenceManager.singleton().getString("token").equals("")){
+               startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+           }else{
+               startActivity(Intent(this@SplashActivity, FeedActivity::class.java))
+           }
+
 
             // close this activity
             finish()

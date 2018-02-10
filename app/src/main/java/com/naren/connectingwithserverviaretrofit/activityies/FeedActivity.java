@@ -1,15 +1,14 @@
 package com.naren.connectingwithserverviaretrofit.activityies;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.naren.connectingwithserverviaretrofit.R;
+import com.naren.connectingwithserverviaretrofit.activityies.managers.FeedManager;
+import com.naren.connectingwithserverviaretrofit.activityies.models.FeedMdel;
 
-public class FeedActivity extends AppCompatActivity {
+public class FeedActivity extends AppCompatActivity implements FeedManager.FeedListListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +17,16 @@ public class FeedActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+      FeedManager.singleton().getFeedList(this);
     }
 
+    @Override
+    public void onSuccess(FeedMdel feedMdels) {
+
+    }
+
+    @Override
+    public void onFailure(String errorMsg, Throwable error) {
+
+    }
 }

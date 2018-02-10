@@ -40,7 +40,7 @@ import okio.Buffer;
         Request original = chain.request();
         Request.Builder requestBuilder = original.newBuilder()
                 .header("ApplicationId", "MC12");
-        if (SharedPreferenceManager.singleton().getString("token") != "") {
+        if (!SharedPreferenceManager.singleton().getString("token").equals("")) {
             requestBuilder.header("Token", SharedPreferenceManager.singleton().getString("token"));
         }
         Request request = requestBuilder.build();

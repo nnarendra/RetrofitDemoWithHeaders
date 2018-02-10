@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -18,6 +19,9 @@ public interface ApiInterface {
 
     @POST("users/login")
     Call<JsonElement> doLogin(@Body HashMap<String,String> map);
+
+    @GET("posts/posts")
+    Call<JsonElement> getFeedList();
 
 
 }
