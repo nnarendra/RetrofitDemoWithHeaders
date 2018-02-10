@@ -2,9 +2,11 @@ package com.naren.connectingwithserverviaretrofit.activityies.network;
 
 import com.google.gson.JsonElement;
 
+import java.util.HashMap;
+
 import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Query;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
 
 /**
  * Created by narendra on 20/01/18.
@@ -14,9 +16,8 @@ public interface ApiInterface {
 
 
 
-    @GET("rest/")
-    Call<JsonElement> getImageList(@Query("method") String methodValue, @Query("api_key") String apKeyValue, @Query("per_page") int perPage,
-                                   @Query("page") int page, @Query("format") String format, @Query("nojsoncallback") int callbackValue);
+    @POST("users/login")
+    Call<JsonElement> doLogin(@Body HashMap<String,String> map);
 
 
 }

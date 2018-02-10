@@ -13,7 +13,6 @@ public class SharedPreferenceManager {
 
     // members
     private static SharedPreferenceManager sSingleton;
-    // constants.
     private final String PREFERENCES = "preferences";
     private SharedPreferences mSharedPreference;
 

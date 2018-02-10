@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.naren.connectingwithserverviaretrofit">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:allowBackup="true"
         android:name=".activityies.RetrofitDemoApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -23,6 +25,10 @@
         <activity
             android:name=".activityies.LoginActivity"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activityies.FeedActivity"
+            android:label="@string/title_activity_feed"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

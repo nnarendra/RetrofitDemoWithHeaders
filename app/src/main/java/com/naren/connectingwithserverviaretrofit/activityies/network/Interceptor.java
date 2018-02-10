@@ -21,7 +21,7 @@ import okio.Buffer;
  * Created by narendra on 10/2/18.
  */
 
-class Interceptor implements okhttp3.Interceptor {
+ public class Interceptor implements okhttp3.Interceptor {
 
 
     private static String bodyToString(final Request request) {
