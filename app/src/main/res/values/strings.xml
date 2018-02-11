@@ -4,4 +4,11 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="action_forgot_password"><u>Forgot Password?</u></string>
     <string name="title_activity_feed">FeedActivity</string>
+    <string name="msg_mycotra">MyCotra</string>
+    <string name="msg_username">UserName/Email/Phone No</string>
+    <string name="msg_password">Password</string>
+    <string name="label_login">Login</string>
+    <string name="msg_or_login_with">Or login with</string>
+    <string name="msg_new_user">New User?</string>
+    <string name="label_signup">Signup</string>
 </resources>
