@@ -11,4 +11,10 @@
     <string name="msg_or_login_with">Or login with</string>
     <string name="msg_new_user">New User?</string>
     <string name="label_signup">Signup</string>
+    <string name="msg_from">FROM</string>
+    <string name="msg_to">TO</string>
+    <string name="action_like">Like</string>
+    <string name="action_comment">Comment</string>
+    <string name="action_share">Share</string>
+    <string name="action_ask">Ask</string>
 </resources>
