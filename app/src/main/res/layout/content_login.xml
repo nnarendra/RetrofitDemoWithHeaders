@@ -18,6 +18,7 @@
         android:layout_marginTop="40dp"
         android:drawableLeft="@mipmap/ic_launcher"
         android:drawablePadding="8dp"
+        android:textColor="@color/colorPrimary"
         android:gravity="center"
         android:text="MyCotra"
         android:textSize="25sp"
@@ -32,8 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:drawableLeft="@android:drawable/ic_partial_secure"
+        android:layout_marginTop="42dp"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:drawableLeft="@drawable/user_avatar"
         android:drawablePadding="8dp"
         android:ems="10"
         android:hint="UserName/Email/Phone No"
@@ -48,7 +51,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@android:drawable/ic_partial_secure"
+        android:drawableLeft="@drawable/lock_icon"
         android:drawablePadding="8dp"
         android:ems="10"
         android:hint="Password"
@@ -64,6 +67,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        style="@style/CommonBtn"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,13 +88,23 @@
         android:id="@+id/tv_or_login_with"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="8dp"
         android:text="Or login with"
+        app:layout_constraintBottom_toTopOf="@+id/iv_linked_login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_pwd" />
+    <View
+        style="@style/DividerLine"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_or_login_with"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_sign_up"
@@ -100,6 +114,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:text="Signup"
+
+        style="@style/CommonBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -132,7 +148,7 @@
         android:layout_marginStart="72dp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_partial_secure" />
+        app:srcCompat="@drawable/facebook" />
 
     <ImageView
         android:id="@+id/iv_google_login"
@@ -141,7 +157,7 @@
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintStart_toEndOf="@+id/iv_facebook_login"
-        app:srcCompat="@android:drawable/ic_partial_secure" />
+        app:srcCompat="@drawable/google_plus" />
 
     <ImageView
         android:id="@+id/iv_linked_login"
@@ -150,7 +166,7 @@
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintStart_toEndOf="@+id/iv_google_login"
-        app:srcCompat="@android:drawable/ic_partial_secure" />
+        app:srcCompat="@drawable/linkedin" />
 
     <ImageView
         android:id="@+id/iv_twitter_login"
@@ -159,7 +175,7 @@
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintStart_toEndOf="@+id/iv_linked_login"
-        app:srcCompat="@android:drawable/ic_partial_secure" />
+        app:srcCompat="@drawable/twitter" />
 
 
 
