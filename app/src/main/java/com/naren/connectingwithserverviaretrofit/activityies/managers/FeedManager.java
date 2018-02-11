@@ -51,7 +51,7 @@ public class FeedManager {
                 // response.
                 JsonObject dataObJ = GSONUtility.getJsonObjectSafe(response.body().getAsJsonObject(), "data");
                 JsonObject postsObj = GSONUtility.getJsonObjectSafe(dataObJ.getAsJsonObject(), "posts");
-                JsonArray postsArray = GSONUtility.getJsonArraySafe(postsObj, "posts");
+                JsonArray postsArray = GSONUtility.getJsonArraySafe(postsObj, "data");
                  FeedMdel feedMdel = new Gson().fromJson(postsObj, FeedMdel.class);
                 List<Post> posts = new ArrayList<>();
                 for (JsonElement element : postsArray) {
