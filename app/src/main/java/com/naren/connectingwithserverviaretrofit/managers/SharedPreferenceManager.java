@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.managers;
+package com.naren.connectingwithserverviaretrofit.managers;
 
 import android.content.Context;
 import android.content.SharedPreferences;

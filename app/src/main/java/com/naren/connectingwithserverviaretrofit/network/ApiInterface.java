@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.network;
+package com.naren.connectingwithserverviaretrofit.network;
 
 import com.google.gson.JsonElement;
 

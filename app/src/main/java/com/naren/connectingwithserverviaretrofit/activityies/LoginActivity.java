@@ -12,11 +12,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.naren.connectingwithserverviaretrofit.R;
-import com.naren.connectingwithserverviaretrofit.activityies.managers.AuthManager;
-import com.naren.connectingwithserverviaretrofit.activityies.managers.SharedPreferenceManager;
-import com.naren.connectingwithserverviaretrofit.activityies.models.UserModel;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener,AuthManager.LoginListener {
+
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener, com.naren.connectingwithserverviaretrofit.managers.AuthManager.LoginListener {
 
 
     private Button mLogin;
@@ -87,13 +85,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void doLogin(String userName, String password) {
         mpProgressDialog.show();
-        AuthManager.singleton().login(userName,password,this);
+        com.naren.connectingwithserverviaretrofit.managers.AuthManager.singleton().login(userName,password,this);
     }
 
     @Override
-    public void onSuccess(UserModel userModel) {
+    public void onSuccess(com.naren.connectingwithserverviaretrofit.models.UserModel userModel) {
         mpProgressDialog.dismiss();
-        SharedPreferenceManager.singleton().save("token",userModel.token);
+        com.naren.connectingwithserverviaretrofit.managers.SharedPreferenceManager.singleton().save("token",userModel.token);
         startActivity(new Intent(LoginActivity.this,FeedActivity.class));
 
     }

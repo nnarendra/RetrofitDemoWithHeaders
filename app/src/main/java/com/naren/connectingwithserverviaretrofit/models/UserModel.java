@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.models;
+package com.naren.connectingwithserverviaretrofit.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

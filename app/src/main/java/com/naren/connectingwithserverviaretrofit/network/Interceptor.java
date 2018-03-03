@@ -1,12 +1,12 @@
-package com.naren.connectingwithserverviaretrofit.activityies.network;
+package com.naren.connectingwithserverviaretrofit.network;
 
 import android.util.Log;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
-import com.naren.connectingwithserverviaretrofit.activityies.managers.SharedPreferenceManager;
-import com.naren.connectingwithserverviaretrofit.activityies.utils.GSONUtility;
+import com.naren.connectingwithserverviaretrofit.managers.SharedPreferenceManager;
+import com.naren.connectingwithserverviaretrofit.utils.GSONUtility;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;
@@ -70,7 +70,7 @@ import okio.Buffer;
                 return response.newBuilder().body(ResponseBody.create(contentType, body)).build();
             } else {
 
-                throw new ResponseException(GSONUtility.getStringSafe(apiResponse, "status"));
+                throw new com.naren.connectingwithserverviaretrofit.network.ResponseException(GSONUtility.getStringSafe(apiResponse, "status"));
             }
 
         } catch (SocketTimeoutException ex) {

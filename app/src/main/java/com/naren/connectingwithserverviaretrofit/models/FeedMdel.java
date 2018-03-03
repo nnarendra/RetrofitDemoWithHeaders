@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.models;
+package com.naren.connectingwithserverviaretrofit.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -35,10 +35,10 @@ public class FeedMdel {
     @Expose
     public Integer to;
 
-    public List<Post> postList;
+    public List<com.naren.connectingwithserverviaretrofit.models.Post> postList;
 
 
-    public void setPostList(List<Post> postList){
+    public void setPostList(List<com.naren.connectingwithserverviaretrofit.models.Post> postList){
         this.postList=postList;
     }
 

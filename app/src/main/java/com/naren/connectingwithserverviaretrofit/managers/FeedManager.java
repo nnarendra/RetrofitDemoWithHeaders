@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.managers;
+package com.naren.connectingwithserverviaretrofit.managers;
 
 import android.util.Log;
 
@@ -7,9 +7,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.naren.connectingwithserverviaretrofit.activityies.RetrofitDemoApplication;
-import com.naren.connectingwithserverviaretrofit.activityies.models.FeedMdel;
-import com.naren.connectingwithserverviaretrofit.activityies.models.Post;
-import com.naren.connectingwithserverviaretrofit.activityies.utils.GSONUtility;
+import com.naren.connectingwithserverviaretrofit.models.FeedMdel;
+import com.naren.connectingwithserverviaretrofit.models.Post;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,9 +48,9 @@ public class FeedManager {
             public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
                 Log.i(TAG, response.toString());
                 // response.
-                JsonObject dataObJ = GSONUtility.getJsonObjectSafe(response.body().getAsJsonObject(), "data");
-                JsonObject postsObj = GSONUtility.getJsonObjectSafe(dataObJ.getAsJsonObject(), "posts");
-                JsonArray postsArray = GSONUtility.getJsonArraySafe(postsObj, "data");
+                JsonObject dataObJ = com.naren.connectingwithserverviaretrofit.utils.GSONUtility.getJsonObjectSafe(response.body().getAsJsonObject(), "data");
+                JsonObject postsObj = com.naren.connectingwithserverviaretrofit.utils.GSONUtility.getJsonObjectSafe(dataObJ.getAsJsonObject(), "posts");
+                JsonArray postsArray = com.naren.connectingwithserverviaretrofit.utils.GSONUtility.getJsonArraySafe(postsObj, "data");
                  FeedMdel feedMdel = new Gson().fromJson(postsObj, FeedMdel.class);
                 List<Post> posts = new ArrayList<>();
                 for (JsonElement element : postsArray) {

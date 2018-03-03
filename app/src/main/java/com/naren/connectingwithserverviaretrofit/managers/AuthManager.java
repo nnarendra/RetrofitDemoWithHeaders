@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.managers;
+package com.naren.connectingwithserverviaretrofit.managers;
 
 import android.util.Log;
 
@@ -6,8 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.naren.connectingwithserverviaretrofit.activityies.RetrofitDemoApplication;
-import com.naren.connectingwithserverviaretrofit.activityies.models.UserModel;
-import com.naren.connectingwithserverviaretrofit.activityies.utils.GSONUtility;
+import com.naren.connectingwithserverviaretrofit.models.UserModel;
+import com.naren.connectingwithserverviaretrofit.utils.GSONUtility;
 
 import java.util.HashMap;
 

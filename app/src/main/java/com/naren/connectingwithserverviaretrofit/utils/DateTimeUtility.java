@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.utils;
+package com.naren.connectingwithserverviaretrofit.utils;
 
 import android.util.Log;
 

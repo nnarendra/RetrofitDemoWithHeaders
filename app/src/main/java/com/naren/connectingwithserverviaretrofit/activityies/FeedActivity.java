@@ -10,11 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.naren.connectingwithserverviaretrofit.R;
-import com.naren.connectingwithserverviaretrofit.activityies.adapters.FeedAdapter;
-import com.naren.connectingwithserverviaretrofit.activityies.managers.FeedManager;
-import com.naren.connectingwithserverviaretrofit.activityies.models.FeedMdel;
 
-public class FeedActivity extends AppCompatActivity implements FeedManager.FeedListListener {
+
+public class FeedActivity extends AppCompatActivity implements com.naren.connectingwithserverviaretrofit.managers.FeedManager.FeedListListener {
 
 
     private ProgressDialog mpProgressDialog;
@@ -32,14 +30,14 @@ public class FeedActivity extends AppCompatActivity implements FeedManager.FeedL
         mpProgressDialog = new ProgressDialog(this);
         mpProgressDialog.setMessage("Loading.Please wait....");
         mpProgressDialog.show();
-      FeedManager.singleton().getFeedList(this);
+      com.naren.connectingwithserverviaretrofit.managers.FeedManager.singleton().getFeedList(this);
     }
 
     @Override
-    public void onSuccess(FeedMdel feedMdels) {
+    public void onSuccess(com.naren.connectingwithserverviaretrofit.models.FeedMdel feedMdels) {
         mpProgressDialog.dismiss();
         //here we need to set adapter to the recycler view
-        FeedAdapter  feedAdapter= new FeedAdapter(feedMdels.postList,FeedActivity.this);
+        com.naren.connectingwithserverviaretrofit.adapters.FeedAdapter feedAdapter= new com.naren.connectingwithserverviaretrofit.adapters.FeedAdapter(feedMdels.postList,FeedActivity.this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mFeedRecyclerView.setLayoutManager(mLayoutManager);
         mFeedRecyclerView.setItemAnimator(new DefaultItemAnimator());

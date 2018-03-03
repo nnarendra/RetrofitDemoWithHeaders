@@ -1,4 +1,4 @@
-package com.naren.connectingwithserverviaretrofit.activityies.adapters;
+package com.naren.connectingwithserverviaretrofit.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,8 +12,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.naren.connectingwithserverviaretrofit.R;
-import com.naren.connectingwithserverviaretrofit.activityies.models.Post;
-import com.naren.connectingwithserverviaretrofit.activityies.utils.DateTimeUtility;
+import com.naren.connectingwithserverviaretrofit.models.Post;
+import com.naren.connectingwithserverviaretrofit.utils.DateTimeUtility;
 
 import java.util.Date;
 import java.util.List;
